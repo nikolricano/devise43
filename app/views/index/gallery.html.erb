@@ -1,0 +1,11 @@
+<h1>Index#gallery</h1>
+<p>Find me in app/views/index/gallery.html.erb</p>
+
+<%= form_for @current_student, url: index_upload_product_path, method: :post do |f| %>
+  <%= f.label :product %>:
+  <%= f.file_field :product %><br />
+
+  <%= f.submit %>
+<% end %>
+
+<%= image_tag(@student.photo_url) %>
